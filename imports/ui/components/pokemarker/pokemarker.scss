@@ -1,0 +1,118 @@
+.pokemarker-container{
+  position: relative;
+  z-index: 900;
+  .pokemarker{
+    position:absolute;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border: solid 2px rgba(96, 0, 187, 1);;
+    border-radius: 20px 20px 20px 20px;
+    background: white;
+    color: transparent;
+    text-align: center;
+    overflow: hidden;
+
+    -webkit-animation: markerShrink 250ms ease-in-out;
+    animation: markerShrink 250ms ease-in-out;
+
+    .pokemarker-img{
+      height: 40px;
+      -webkit-animation: imgShrink 250ms ease-in-out;
+      animation: imgShrink 250ms ease-in-out;
+    }
+  }
+}
+.pokemarker-container.selected{
+  position: relative;
+  z-index: 9000;
+
+  .pokemarker{
+    width: 150px;
+    height: 150px;
+    border: solid 5px rgba(96, 0, 187, 1);;
+    border-radius: 20px 20px 20px 20px;
+    background: white;
+    color: #6000bb;
+    font-size: 20px;
+    padding: 10px;
+    text-align: center;
+    -webkit-animation: markerGrow 250ms ease-in-out;
+    animation: markerGrow 250ms ease-in-out;
+
+    .pokemarker-img{
+      height: 70px;
+      max-width: 140px;
+      margin: 10px;
+      -webkit-animation: imgGrow 250ms ease-in-out;
+      animation: imgGrow 250ms ease-in-out;
+    }
+  }
+
+  .fixed-container-background{
+    position: fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    height: 100vh;
+    background-color: rgba(96, 0, 187, 0.2);
+    z-index: 9001;
+    text-align: center;
+
+    .fixed-container{
+      background-color: white;
+      border-radius: 5px;
+      border: 1px solid rgba(96, 0, 187, 1);
+      display: block;
+      margin: auto;
+
+      position: relative;
+      left:0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+
+      width: 340px;
+      padding: 18px;
+      margin-top: 120px;
+    }
+  }
+}
+
+@-webkit-keyframes markerGrow {
+    0% {
+      width: 40px;
+      height: 40px;
+    }
+    100% {
+      width: 150px;
+      height: 150px;
+    }
+}
+@-webkit-keyframes markerShrink {
+    0% {
+      width: 150px;
+      height: 150px;
+    }
+    100% {
+      width: 40px;
+      height: 40px;
+    }
+}
+@-webkit-keyframes imgGrow {
+    0% {
+      height: 30px;
+    }
+    100% {
+      height: 70px;
+    }
+}
+@-webkit-keyframes imgShrink {
+    0% {
+      height: 70px;
+    }
+    100% {
+      height: 30px;
+    }
+}

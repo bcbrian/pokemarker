@@ -1,0 +1,26 @@
+html, body, #react-root, #app-root, main{
+  height: 100%;
+}
+
+main{
+  padding-top: 54px;
+}
+
+.pm-all-page{
+  position: fixed;
+  top: 54px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.navbar-brand > img {
+    display: block;
+    height: 30px;
+}
+
+// header{
+//   position: fixed;
+//   z-index: 9000;
+//   width: 100%;
+// }

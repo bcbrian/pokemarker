@@ -1,0 +1,48 @@
+.fixed-container-background{
+  position: fixed;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background-color: rgba(242, 229, 255, 0.78);
+  z-index: 9001;
+  text-align: center;
+
+  .fixed-container{
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid rgba(96, 0, 187, 1);
+    display: block;
+    margin: auto;
+
+    position: relative;
+    left:0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    width: 100%;
+    max-width: 340px;
+    padding: 18px;
+    margin-top: 120px;
+  }
+}
+
+.pokemon-select-box{
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  position: absolute;
+  z-index: 100;
+}
+
+.pokemon-zoom-box{
+  display: inline-block;
+  text-align: right;
+  padding: 10px;
+  position: absolute;
+  right: 0;
+  z-index: 100;
+  bottom: 50%;
+}

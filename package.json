@@ -1,0 +1,51 @@
+{
+  "name": "bcbrian",
+  "version": "0.0.1",
+  "description": "bcbrian.com",
+  "main": "client/main.js",
+  "scripts": {
+    "start": "meteor run",
+    "start:chimp": "USE_TEST_ENVIRONMENT=true meteor run",
+    "test": "./.scripts/test.sh",
+    "test:client": "meteor test --driver-package practicalmeteor:mocha --port 3100",
+    "test:console": "spacejam test --driver-package practicalmeteor:mocha-console-runner --port 3100",
+    "build:css": "node-sass --include-path node_modules client/main.scss client/bundle.css",
+    "watch:css": "nodemon -e scss -x npm run build:css",
+    "watch:help": "nodemon --help",
+    "watch:test:console": "nodemon -e js,jsx -x npm run test:console",
+    "chimp": "chimp --ddp=http://localhost:3000 --watch --browser=phantomjs",
+    "test:chimp": "chimp --ddp=http://localhost:3000 --browser=phantomjs",
+    "watch:chimp:console": "npm run start:chimp & npm run chimp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bcbrian/bcbrian.git"
+  },
+  "keywords": [],
+  "author": "Brian Bartholomew",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bcbrian/bcbrian/issues"
+  },
+  "homepage": "https://github.com/bcbrian/bcbrian#readme",
+  "dependencies": {
+    "bootstrap": "^4.0.0-alpha.2",
+    "google-map-react": "^0.15.1",
+    "indexof": "0.0.1",
+    "lodash": "^4.13.1",
+    "meteor-node-stubs": "^0.2.1",
+    "node-sass": "^3.4.2",
+    "pokemon-go-node-api": "git://github.com/bcbrian/Pokemon-GO-node-api.git",
+    "rc-select": "^6.4.6",
+    "react": "^15.2.1",
+    "react-addons-pure-render-mixin": "^15.0.1",
+    "react-dom": "^15.0.1",
+    "react-mounter": "^1.1.0"
+  },
+  "devDependencies": {
+    "chimp": "^0.31.1",
+    "nodemon": "^1.9.1",
+    "react-addons-test-utils": "^15.0.1",
+    "spacejam": "^1.6.1"
+  }
+}
